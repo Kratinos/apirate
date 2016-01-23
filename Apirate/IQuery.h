@@ -42,7 +42,7 @@ namespace Apirate {
 		* @param header The name of the header the implementor wants to retrieve.
 		* @return The value associated to the header
 		*/
-		virtual const std::string& getHeader(const std::string& header) = 0;
+		virtual std::string& getHeader(const std::string& header) = 0;
 
 		/**
 		* @brief Getter for a specific header
@@ -60,7 +60,9 @@ namespace Apirate {
 		* @param header The name of the header the implementor wants to retrieve.
 		* @return The value associated to the header
 		*/
-		virtual const std::string& operator[](const std::string& header) = 0;
+		virtual std::string& operator[](const std::string& header) = 0;
+
+		virtual const std::string& operator[](const std::string& header) const = 0;
 
 		/**
 		* @brief Getter for all headers

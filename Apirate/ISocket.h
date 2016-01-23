@@ -66,6 +66,10 @@ namespace Apirate {
 		* port through the socket object.
 		* @return The port of the client.
 		*/
-		virtual const unsigned short getPort() const = 0;
+		virtual unsigned short getPort() const = 0;
+
+		virtual ISocket	&setPort(unsigned short port) = 0;
+		virtual ISocket	&setIP(const std::string &ip) = 0;
+		virtual ISocket	&setHost(const std::string &host) = 0;
 	};
 }

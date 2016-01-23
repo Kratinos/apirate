@@ -45,7 +45,7 @@ namespace Apirate {
 		* @brief Getter for the module's priority
 		* @details This method allows the implementor to retrieve the priority
 		* of the module.
-		* @return A float being the priority of the module. 
+		* @return A float being the priority of the module.
 		*/
 		virtual float getPriority() const = 0;
 
@@ -110,5 +110,11 @@ namespace Apirate {
 		* @return The cloned module.
 		*/
 		virtual IModule* clone() = 0;
+
+		virtual IModule	&setPriority(float priority) = 0;
+		virtual IModule	&setVersion(float version) = 0;
+		virtual IModule	&setName(const std::string &name) = 0;
+		virtual IModule	&setModuleType(eModule type) = 0;
+		virtual IModule	&setLogger(ILogger *log) = 0;
 	};
 }
